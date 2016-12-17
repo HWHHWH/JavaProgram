@@ -1,0 +1,12 @@
+package models;
+//工厂类
+public class PersonFactory {
+	public Person getPerson(String ethnic){//获取具体产品角色实例
+		if(ethnic.equalsIgnoreCase("chin")){//根据参数返回person接口的实例
+			return new Chinese();//返回chinese实例
+		}else{
+			return new American();//返回american实例
+		}
+	}
+
+}

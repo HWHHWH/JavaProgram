@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<!-- 定义第一个bean id为chinese -->
+	<bean id="chinese" class="models.Chinese"/>
+	<!-- 定义第二个bean id为american -->
+	<bean id="american" class="models.American"/>
+</beans>

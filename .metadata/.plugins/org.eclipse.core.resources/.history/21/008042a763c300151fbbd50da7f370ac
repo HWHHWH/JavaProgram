@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+	<package name="default" extends="struts-default" namespace="/">
+	
+		<!-- 自定义拦截器 -->
+		<interceptors>
+			<interceptor name="myitp" class="struts2Test.LoginInterceptor"/>
+		</interceptors>
+		
+		<!-- 配置LoginAction类  struts.xml-->
+	    <action name="login" class="struts2Test.LoginAction">
+			<result name="success">/success.jsp</result>
+			<result name="login">/login.jsp</result>
+			<!-- mytip -->
+			<interceptor-ref name="mytip"/> 
+		</action> 
+		
+		<!-- <action name="login" class="struts2Test.LoginAction">
+			<result name="success">/success.jsp</result>
+			<result name="regist">/regist.jsp</result>
+		</action>  -->
+		
+		
+		<!-- result的结果类型 redirect类型 -->
+		<!-- <action name="login" class="struts2Test.LoginAction">
+			<result type="redirect">
+				<param name="location">/success.jsp</param>
+				<param name="username">${username}</param>
+				<param name="password">${password}</param>
+			</result>
+		</action> -->
+		
+		<!-- result的结果类型为redirectAction类型 -->
+		<!-- <action name="login" class="struts2Test.LoginAction">
+			<result type="redirectAction">
+				<param name="actionName">login</param>	
+				<param name="namespace">/login</param>			
+			</result>
+		</action> -->
+		
+		<!-- 配置邮件类MessageAction -->
+		<action name="message" class="struts2Test.MessageAction">
+			<result name="success">/email.jsp</result>
+		</action>
+		
+		<action name="save" class="struts2Test.MessageAction" method="save">
+			<result name="save">/save.jsp</result>
+		</action>
+		
+		<!-- 配置AddUserAction类 -->
+		<!-- <action name="adduser" class="struts2Test.AddUserAction">
+			<result name="success">/user_list.jsp</result>
+		</action> -->
+		
+		<!-- 配置IoCAddUserAction 直接访问ServletAPI -->
+		<!-- <action name="adduser" class="struts2Test.IoCAddUserAction">
+			<result name="success">/user_list.jsp</result>
+		</action> -->
+		
+		<!-- 配置NOIoCAddUserAction直接访问servletAPI -->
+		<action name="adduser" class="struts2Test.NOIoCAddUserAction">
+			<result name="success">/user_list.jsp</result>
+		</action>
+	</package>
+	
+
+</struts>

@@ -1,0 +1,15 @@
+package models;
+
+public class FactoryTest2 {
+	public static void main(String[] args) {
+		PersonFactory pf=new PersonFactory();
+		Person p=null;
+		p=pf.getPerson("chin");
+		System.out.println(p.sayHello("ºúÎ°"));
+		System.out.println(p.sayGoodBye("ºúÎ°"));
+		p=pf.getPerson("ame");
+		System.out.println(p.sayHello("huwei"));
+		System.out.println(p.sayGoodBye("huwei"));
+	}
+
+}

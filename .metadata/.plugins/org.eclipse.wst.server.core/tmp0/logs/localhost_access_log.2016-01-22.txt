@@ -1,0 +1,17 @@
+127.0.0.1 - - [22/Jan/2016:18:55:25 +0800] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [22/Jan/2016:18:55:31 +0800] "GET /struts2Test/login.jsp HTTP/1.1" 200 513
+127.0.0.1 - - [22/Jan/2016:18:56:55 +0800] "GET /servletTest/login.html HTTP/1.1" 200 612
+127.0.0.1 - - [22/Jan/2016:18:57:05 +0800] "GET /struts2Test/login.jsp HTTP/1.1" 200 513
+127.0.0.1 - - [22/Jan/2016:19:11:17 +0800] "GET /struts2Test/login.jsp HTTP/1.1" 200 688
+127.0.0.1 - - [22/Jan/2016:19:11:18 +0800] "GET /struts2Test/login.jsp HTTP/1.1" 200 688
+127.0.0.1 - - [22/Jan/2016:19:11:33 +0800] "POST /struts2Test/login HTTP/1.1" 404 1216
+127.0.0.1 - - [22/Jan/2016:19:13:46 +0800] "GET /struts2Test/login.jsp HTTP/1.1" 200 688
+127.0.0.1 - - [22/Jan/2016:19:13:52 +0800] "POST /struts2Test/login HTTP/1.1" 404 1216
+127.0.0.1 - - [22/Jan/2016:19:21:51 +0800] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [22/Jan/2016:19:21:55 +0800] "GET /struts2Test/login.jsp HTTP/1.1" 200 604
+127.0.0.1 - - [22/Jan/2016:19:22:08 +0800] "POST /struts2Test/login.action HTTP/1.1" 200 45
+127.0.0.1 - - [22/Jan/2016:19:22:27 +0800] "POST /struts2Test/login HTTP/1.1" 200 45
+127.0.0.1 - - [22/Jan/2016:19:22:34 +0800] "GET /struts2Test/login.jsp HTTP/1.1" 200 604
+127.0.0.1 - - [22/Jan/2016:19:22:39 +0800] "POST /struts2Test/login.action HTTP/1.1" 200 609
+127.0.0.1 - - [22/Jan/2016:19:22:43 +0800] "POST /struts2Test/login.action HTTP/1.1" 200 609
+127.0.0.1 - - [22/Jan/2016:19:22:52 +0800] "POST /struts2Test/login.action HTTP/1.1" 200 45

@@ -1,0 +1,14 @@
+package models;
+
+import interfaceSet.Person2;
+
+public class Janpanese implements Person2{
+	@Override
+	public String sayHello(String name) {
+		return name+",ÄãºÃ";
+	}
+	@Override
+	public String sayGoodBye(String name) {
+		return name+"ÔÙ¼û";
+	}
+}

@@ -1,0 +1,7 @@
+package aopTest;
+
+import org.springframework.aop.AfterReturningAdvice;
+
+public class WelcomeUser implements AfterReturningAdvice{
+
+}

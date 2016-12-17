@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://struts.apache.org/dtds/struts-2.3.dtd" uri="file:///E:/HWH/ssh/struts-2.3.24.1/src/core/src/main/resources/struts-2.3.dtd"/>
+  <uri name="http://www.springframework.org/dtd/spring-beans.dtd" uri="file:///E:/HWH/ssh/spring-framework-3.0.6.RELEASE/projects/org.springframework.beans/src/main/resources/org/springframework/beans/factory/xml/spring-beans.dtd"/>
+</catalog>

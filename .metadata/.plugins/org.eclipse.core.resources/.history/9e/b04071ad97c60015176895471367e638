@@ -1,0 +1,13 @@
+package aopTest;
+import java.lang.reflect.Method;
+
+import org.springframework.aop.BeforeAdvice;
+import org.springframework.aop.MethodBeforeAdvice;
+
+public class CheckUser implements MethodBeforeAdvice, BeforeAdvice{
+	public void before(Method method,Object[] objs,Object obj) throws Throwable{
+		String username=(String)objs[0];
+		System.out.println("正在对用户进行身份检测。。。");
+	}
+
+}

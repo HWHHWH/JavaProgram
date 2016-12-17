@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+		"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean name="/user.do" class="springMVC.UserCommandController"><!-- 配置控制器 -->
+		<property name="page" value="user"/><!-- 注入属性 -->
+	</bean>
+	
+	<!-- 定义视图 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.InternalResourceView"/>
+		<property name="prefix" value="/"/><!-- 前缀 -->
+		<property name="suffix" value=".jsp"/><!-- 后缀 -->
+	</bean>
+	
+	<!-- 定义映射 -->
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/register.do">regCon</prop><!-- 指定控制器 -->
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 定义控制器 -->
+	<bean id="regCon" name="/register.do" class="springMVC.RegController">
+		<property name="commandClass" value="models.LoginMessage"/>
+		<property name="formView" value="register"/>
+		<property name="successView" value="show"/>
+	</bean>
+	
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<bean id="methodNameResolver" 
+	class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+		<property name="paramName" value="method"/>
+	</bean>
+	
+	<!-- 配置MultiActionController控制器 -->
+	<bean id="userController" class="springMVC.UserMultiActionController">
+		<property name="methodNameResolver" ref="methodNameResolver"></property>
+	</bean>
+	
+	<!-- 定义映射 -->
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/show.do">userController</prop><!-- 指定控制器 -->
+			</props>
+		</property>
+	</bean>
+</beans>

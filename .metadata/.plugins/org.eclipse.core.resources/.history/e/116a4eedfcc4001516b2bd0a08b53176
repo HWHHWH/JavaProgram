@@ -1,0 +1,12 @@
+package models;
+
+import org.apache.catalina.core.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+public class SpringTest {
+	public static void main(String[] args) {
+		AbstractApplicationContext ctx=new FileSystemXmlApplicationContext("bean.xml");
+	}
+
+}

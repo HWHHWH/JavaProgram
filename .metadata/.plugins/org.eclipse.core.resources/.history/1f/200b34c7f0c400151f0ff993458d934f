@@ -1,0 +1,13 @@
+package models;
+
+import org.apache.catalina.core.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+public class FactoryTest {
+	public static void main(String[] args) {
+		ApplicationContext ctx=new FileSystemXmlApplicationContext("src/bean.xml");
+		Person p=null;
+		p=(Person)ctx.getb
+	}
+
+}

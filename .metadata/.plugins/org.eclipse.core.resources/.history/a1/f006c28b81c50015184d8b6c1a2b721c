@@ -1,0 +1,8 @@
+package interfaceSet;
+//抽象产品角色接口
+public interface Person {
+	public String sayHello(String name);//打招呼
+	public String sayGoodBye(String name);//告别
+	
+	public void useAxe();//定义使用斧头的方法
+}

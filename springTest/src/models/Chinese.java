@@ -1,0 +1,20 @@
+package models;
+
+import interfaceSet.Axe;
+import interfaceSet.Person;
+
+public class Chinese implements Person{
+	private Axe axe;//面向接口编程，而不是具体的实现类
+	public Chinese() {//空构造器
+
+	}
+	//设值注入所需要的setXxx方法
+	public void setAxe(Axe axe) {
+		this.axe = axe;
+	}
+	//实现接口的方法
+	@Override
+	public void useAxe() {
+		System.out.println( axe.chop());
+	}
+}

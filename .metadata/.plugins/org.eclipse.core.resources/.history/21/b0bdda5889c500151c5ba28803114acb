@@ -1,0 +1,6 @@
+package interfaceSet;
+//定义斧头接口
+public interface Axe {
+	public String chop();//定义砍的方法
+
+}

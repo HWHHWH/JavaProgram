@@ -1,0 +1,20 @@
+package models;
+
+import org.apache.catalina.core.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+public class FactoryTest {
+	public static void main(String[] args) {
+		FileSystemXmlApplicationContext ctx=new FileSystemXmlApplicationContext("src/bean.xml");
+		Person p=null;
+		p=(Person)ctx.getBean("chinese");
+		System.out.println(p.sayHello("ºúÎ°»Í"));
+		System.out.println(p.sayGoodBye("ºúÎ°»Í"));
+		
+		/*p=(Person)ctx.getBean("american");
+		System.out.println(p.sayHello("huweihuang"));
+		System.out.println(p.sayGoodBye("huweihuang"));*/
+		
+	}
+
+}

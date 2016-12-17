@@ -1,0 +1,20 @@
+package test;
+
+import org.springframework.aop.BeforeAdvice;
+import org.springframework.aop.framework.ProxyFactory;
+
+import AOPTest.CheckUser;
+import AOPTest.UserLoginImpl;
+import interfaceSet.UserLogin;
+
+public class BeforeAdviceTest {
+	public static void main(String[] args) {
+		UserLogin target=new UserLoginImpl();
+		BeforeAdvice advice=new CheckUser();
+		ProxyFactory pf=new ProxyFactory();
+		pf.setTarget(target);
+		pf.addAdvice(advice);
+		UserLogin proxy=(UserLogin)pf.getProxy();
+		proxy.login("huweihuang");
+	}
+}

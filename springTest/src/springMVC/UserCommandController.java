@@ -1,0 +1,46 @@
+package springMVC;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.validation.BindException;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.AbstractCommandController;
+
+import models.LoginMessage;
+
+//命令控制类
+public class UserCommandController extends AbstractCommandController{
+	private String page;
+	//构造器
+	public UserCommandController() {
+		setCommandClass(LoginMessage.class);//设置命令对象类型
+	}
+	
+	@Override//处理器handle
+	protected ModelAndView handle(HttpServletRequest request, HttpServletResponse response, Object command, BindException errors)
+			throws Exception {
+		LoginMessage login=(LoginMessage)command;//获取用户对象
+		String username=login.getUsername();//获取用户名
+		String password=login.getPassword();//获取密码
+		List list=new ArrayList();
+		list.add(0,username);
+		list.add(1,password);
+		return new ModelAndView(getPage(), "info", list);
+	}
+	
+	//set get 方法
+	public String getPage() {
+		return page;
+	}
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+	
+	
+}

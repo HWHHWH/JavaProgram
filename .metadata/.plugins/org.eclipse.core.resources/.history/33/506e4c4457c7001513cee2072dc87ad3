@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+		"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean name="/user.do" class="springMVC.UserCommandController"><!-- 配置控制器 -->
+		<property name="page" value="user"/><!-- 注入属性 -->
+	</bean>
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/"/><!-- 前缀 -->
+		<property name="suffix" value=".jsp"/><!-- 后缀 -->
+	</bean>
+</beans>

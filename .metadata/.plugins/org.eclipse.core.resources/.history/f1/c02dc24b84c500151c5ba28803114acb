@@ -1,0 +1,22 @@
+package test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import interfaceSet.Person;
+
+public class FactoryTest {
+	public static void main(String[] args) {
+		ApplicationContext ctx=new FileSystemXmlApplicationContext("src/bean.xml");
+		Person p=null;
+//		p=(Person)ctx.getBean("chinese");
+//		System.out.println(p.sayHello("ºúÎ°»Í"));
+//		System.out.println(p.sayGoodBye("ºúÎ°»Í"));
+		
+		p=(Person)ctx.getBean("american");
+		System.out.println(p.sayHello("huweihuang"));
+		System.out.println(p.sayGoodBye("huweihuang"));
+		
+	}
+
+}

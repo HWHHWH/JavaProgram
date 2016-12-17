@@ -1,0 +1,4 @@
+127.0.0.1 - - [31/Jan/2016:21:01:08 +0800] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [31/Jan/2016:21:01:11 +0800] "GET /springTest/list.jsp HTTP/1.1" 200 1326
+127.0.0.1 - - [31/Jan/2016:21:01:19 +0800] "GET /springTest/show.do?method=delUser HTTP/1.1" 200 279
+127.0.0.1 - - [31/Jan/2016:21:01:29 +0800] "GET /springTest/show.do?method=delUser HTTP/1.1" 200 279

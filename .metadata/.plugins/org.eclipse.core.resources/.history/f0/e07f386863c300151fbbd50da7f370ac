@@ -1,0 +1,27 @@
+<%@ page language="java" import="java.util.*"
+    pageEncoding="UTF-8"%>
+<!-- login.jsp 动态访问调用-->
+<script type="text/javascript">
+	function regist(){
+		myform.action="login!register.action";
+		myform.submit();
+	}
+</script> 
+
+<%@ taglib prefix="s" uri="/struts-tags" %>
+	<s:form action="login" method="post" name="myform" namespace="/">
+		<s:textfield name="username" lable="用户名" cssStyle="width:160px;height:26px;"/>
+		<s:password name="password" lable="密码" cssStyle="width:160px;height:26px;"/>
+		<input type="submit" value="登录"/>
+		<input type="button" value="免费注册" onclick="regist()" style="display:inline;"/>
+	</s:form> 
+
+<%--  <font color="red" style="font-size:12px"><s:property value="#session.errorMsg"/></font>
+ <s:form action="login" method="post">
+ 	<s:textfield name="username" label="用户名" size="20"/>
+ 	<s:textfield name="password" label="密码" size="20"/>
+ 	<s:submit value="登录"/>
+ </s:form> --%>
+ 
+ 
+ 

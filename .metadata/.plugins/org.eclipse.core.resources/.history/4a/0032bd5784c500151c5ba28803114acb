@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+		"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 定义第一个bean id为chinese -->
+	<bean id="chinese" class="models.Chinese">
+	<!-- propery用来指定需要容器注入的属性，axe属性需要容器注入，此处是设值注入
+	因此chinese类必须拥有setAxe的方法 -->
+		<property name="axe">
+			<ref local="stoneAxe"/><!-- 将另一个bean的引用注入给chinese bean -->
+		</property>
+	</bean>
+	
+	<bean id="stoneAxe" class="models.StoneAxe"/>
+	
+	<!-- 定义第二个bean id为american -->
+	<bean id="american" class="models.American"/>
+	
+	
+</beans>
